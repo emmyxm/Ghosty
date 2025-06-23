@@ -40,6 +40,7 @@ client.on('message', async message => {
             { body: '!prank' },
             { body: '!tagall' },
             { body: '!!prank' },
+            { body: '!!!prank' },
             { body: '!welcome' }
         ], '👻 GHOST Bot Menu', 'Pick one:');
         return client.sendMessage(message.from, button);
@@ -54,6 +55,10 @@ client.on('message', async message => {
         const prank = '😈Z͑͛͐Z͗̐̿̈́̀͸͙͍͚ͅA̍͐͂̒̄Ḻ̡̮̞̯ͤͣ͂G͓̟̐O͒͗́😈';
         return message.reply(prank.repeat(50000)); // ⚠ Heavy load for testing
     }
+
+     if (msg === '!!!prank') {
+        const prank = '😈Z͑͛͐Z͗̐̿̈́̀͸͙͍͚ͅA̍͐͂̒̄Ḻ̡̮̞̯ͤͣ͂G͓̟̐O͒͗́😈';
+        return message.reply(prank.repeat(500000));
 
     if (msg === '!tagall' && chat.isGroup) {
         let text = '👥 Tagging everyone:\\n';
